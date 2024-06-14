@@ -1,0 +1,261 @@
+/* layers style */
+.front-page{
+    position: relative;
+    height: 100vh;
+}
+.layer{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: flex-end;
+    overflow: hidden;
+}
+.layer__wave{
+    width: 0;
+    height: 0;
+    padding: 5.5% 116% 0 0;
+    position: relative;
+    z-index: 4;
+}
+#layer-two .layer__wave{
+    padding: 8.4% 116% 0 0;
+    z-index: 3;
+}
+#layer-three .layer__wave{
+    padding: 10% 116% 0 0;
+    z-index: 2;
+}
+#layer-four .layer__wave{
+    padding: 13.6% 116% 0 0;
+    z-index: 1;
+}
+.layer__wave .layer__photo{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+/* animation img */
+.layer__wave .layer__photo{
+    animation: wavesMove ease 3s infinite;
+}
+#layer-two .layer__wave .layer__photo{
+    animation-duration: 3.5s;
+}
+#layer-three .layer__wave .layer__photo{
+    animation-duration: 4s;
+}
+#layer-four .layer__wave .layer__photo{
+    animation-duration: 4.5s;
+}
+
+@keyframes wavesMove{
+    0%{
+        transform: translate(0, 0);
+    }
+    50%{
+        transform: translateX(-12%);
+    }
+    100%{
+        transform: translate(0, 0);
+    }
+}
+
+/* island style */
+.island{
+    position: absolute;
+    left: 0;
+    top: 1000%;
+    transition: all 1.6s ease;
+}
+.island.active{
+    top: 0;
+}
+
+.island__photo{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.island.active .island__photo{
+    animation: islandPhotoAnim 6s linear infinite;
+}
+
+@keyframes islandPhotoAnim {
+    0%{
+        transform: rotate(0);
+    }
+    25%{
+        transform: rotate(5deg);
+    }
+    50%{
+        transform: rotate(0);
+    }
+    75%{
+        transform: rotate(-5deg);
+    }
+    100%{
+        transform: rotate(0);
+    }
+}
+
+/* ship style */
+.ship{
+    position: absolute;
+    top: 0;
+    transition: all 10s ease;
+}
+.ship__body-image{
+    max-width: 100%;
+    max-height: 100%;
+}
+.ship.left-front .ship__body-image{
+    animation: shipPhotoAnimLeftFront 2s linear infinite;
+}
+
+.ship.right-front .ship__body-image{
+    animation: shipPhotoAnimRightFront 2s linear infinite;
+}
+
+.ship__image{
+    width: 100%;
+    height: 100%;
+}
+
+.ship.left-front .ship__image{
+    transform:  rotate3d(0, 1, 0, 180deg);
+}
+
+@keyframes shipPhotoAnimLeftFront {
+    0%{
+        transform: rotate(0);
+    }
+    25%{
+        transform: rotate(5deg);
+    }
+    50%{
+        transform: rotate(0);
+    }
+    75%{
+        transform: rotate(-5deg);
+    }
+    100%{
+        transform: rotate(0);
+    }
+}
+
+@keyframes shipPhotoAnimRightFront {
+    0%{
+        transform: rotate(0);
+    }
+    25%{
+        transform: rotate(5deg);
+    }
+    50%{
+        transform: rotate(0);
+    }
+    75%{
+        transform: rotate(-5deg);
+    }
+    100%{
+        transform: rotate(0);
+    }
+}
+
+
+/* clouds style */
+.clouds__item{
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 0;
+}
+.clouds__item img{
+    max-width: 100%;
+    max-height: 100%;
+}
+
+#clouds-one {
+    width: 14.2%;
+    height: 15%;
+    top: 20.95%;
+    animation: cloudsAnim linear 4s infinite;
+}
+
+#clouds-two {
+    width: 24.1%;
+    height: 20.8%;
+    top: 16%;
+    animation: cloudsAnim linear 6s infinite;
+}
+
+#clouds-three {
+    width: 16.25%;
+    height: 19.6%;
+    top: 50%;
+    animation: cloudsAnim linear 8s infinite;
+}
+
+#clouds-four{
+    width: 14.4%;
+    height: 16.3%;
+    top: 54%;
+    animation: cloudsAnim linear 5s infinite;
+}
+
+@keyframes cloudsAnim {
+    0%{
+        transform: translate(0);
+    }
+    20%{
+        transform: translate(-8px, 8px);
+    }
+    40%{
+        transform: translate(8px, 8px);
+    }
+    60%{
+        transform: translate(8px, -8px);
+    }
+    80%{
+        transform: translate(-8px, -8px);
+    }
+    100%{
+        transform: translate(0);
+    }
+}
+
+/* addaptive style */
+@media screen and (max-width: 768px) {
+    .layer__wave{
+        padding: 8.5% 116% 0 0;
+    }
+    #layer-two .layer__wave{
+        padding: 12.4% 116% 0 0;
+    }
+    #layer-three .layer__wave{
+        padding: 17% 116% 0 0;
+    }
+    #layer-four .layer__wave{
+        padding: 23.6% 116% 0 0;
+    }
+}
+
+@media screen and (max-width: 425px) {
+    .layer__wave{
+        padding: 14.5% 140% 0 0;
+    }
+    #layer-two .layer__wave{
+        padding: 22.4% 140% 0 0;
+    }
+    #layer-three .layer__wave{
+        padding: 30% 140% 0 0;
+    }
+    #layer-four .layer__wave{
+        padding: 38.6% 140% 0 0;
+    }
+}

@@ -1,0 +1,132 @@
+/* style before class scroll */
+/* animation front-page */
+.front-page .layer__wave{
+    transition: transform 2s ease;
+    transform: translateY(100%);
+}
+.front-page .clouds__item{
+    left: 200%;
+    transition: left 2s ease;
+}
+.front-page #clouds-two{
+    transition: left 3s ease;
+}
+.front-page #clouds-three{
+    transition: left 4s ease;
+}
+.front-page #clouds-four{
+    transition: left 5s ease;
+}
+.front-page .front-page__sub-title,
+.front-page .front-page__title{
+    transition: all 1s ease 3s;
+    visibility: hidden;
+    opacity: 0;
+    transform: translateY(50%);
+}
+
+/* animation skypiea */
+.skypiea .skypiea__title{
+    position: relative;
+    transition: all 2s ease;
+    visibility: hidden;
+    opacity: 0;
+    left: 100%;
+}
+.skypiea .skypiea__author-description,
+.skypiea .skypiea__author-photo{
+    transition: all 2s ease 1s;
+    position: relative;
+    left: -100%;
+    opacity: 0;
+    visibility: 0;
+}
+.skypiea .skypiea__author-description{
+    transition-delay: 2s;
+    left: 100%;
+}
+
+/* ocean animation */
+.ocean .ocean__plant{
+    transition: all 1s ease 2s;
+    opacity: 0;
+    visibility: hidden;
+    bottom: 0;
+}
+.ocean .ocean__title{
+    transition: all 3s ease;
+    visibility: hidden;
+    opacity: 0;
+    transform: translateY(50%);
+}
+.ocean .ocean__characters{
+    transition: all 3s ease;
+    visibility: hidden;
+    opacity: 0;
+    transform: translateX(100%);
+}
+/* style after class scroll */
+/* animation front-page */
+.front-page.scroll .layer__wave{
+    transform: translateY(0);
+}
+.front-page.scroll #clouds-one{
+    left: 4.2%;
+}
+.front-page.scroll #clouds-two{
+    left: 73.5%;
+}
+.front-page.scroll #clouds-three{
+    left: 22.2%;
+}
+.front-page.scroll #clouds-four{
+    left: 61.6%;
+}
+.front-page.scroll .front-page__sub-title,
+.front-page.scroll .front-page__title{
+    visibility: visible;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* animation skypiea */
+.skypiea.scroll .skypiea__title{
+    visibility: visible;
+    opacity: 1;
+    left: 0;
+}
+.skypiea.scroll .skypiea__author-description,
+.skypiea.scroll .skypiea__author-photo{
+    left: 0;
+    opacity: 1;
+    visibility: visible;
+}
+
+/* ocean animation */
+.ocean.scroll #ocean__plant1{
+    bottom: 10%;
+}
+.ocean.scroll #ocean__plant2{
+    bottom: 7%;
+}
+.ocean.scroll #ocean__plant3{
+    bottom: 8%;
+}
+.ocean.scroll #ocean__plant4{
+    bottom: 9%;
+}
+.ocean.scroll .ocean__plant{
+    opacity: 1;
+    visibility: visible;
+}
+.ocean.scroll .ocean__title{
+    visibility: visible;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.ocean.scroll .ocean__characters{
+    visibility: visible;
+    opacity: 1;
+    transform: translateX(0);
+}

@@ -1,0 +1,12 @@
+@font-face {
+    font-family: 'ONE PIECE';
+    src: url('../../fonts/ONEPIECE.eot');
+    src: url('../../fonts/ONEPIECE.eot?#iefix') format('embedded-opentype'),
+        url('../../fonts/ONEPIECE.woff2') format('woff2'),
+        url('../../fonts/ONEPIECE.woff') format('woff'),
+        url('../../fonts/ONEPIECE.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+

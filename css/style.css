@@ -1,0 +1,32 @@
+/* imports style */
+@import url("modules/zero-style.css");
+@import url("modules/header.css");
+@import url("modules/anim.css");
+@import url("modules/main.css");
+@import url("modules/fonts.css");
+@import url("modules/footer.css");
+@import url("modules/slider.css");
+@import url("modules/scrollAnimation.css");
+
+/* import fonts */
+/* @import url('https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,100..700;1,100..700&display=swap'); */
+
+/* global style */
+body{
+    font-family: Arial, Helvetica, sans-serif;
+}
+.wraper{
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+.main{
+    flex: 1 1 auto;
+}
+
+.conteiner{
+    overflow: hidden;
+    max-width: 1370px;
+    margin: 0 auto;
+    padding: 0px 15px;
+}
